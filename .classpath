@@ -36,9 +36,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/sabareesan.j/Downloads/Downloads - OLD LAP/gson-2.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sabareesan.j/Downloads/Downloads - OLD LAP/jackson-annotations-2.13.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sabareesan.j/Downloads/Downloads - OLD LAP/jackson-core-2.13.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sabareesan.j/Downloads/Downloads - OLD LAP/jackson-databind-2.13.2.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

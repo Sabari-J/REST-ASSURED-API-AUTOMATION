@@ -16,7 +16,8 @@ public class Test02_POST {
 		jsonObj.put("name", "Sabari");
 		jsonObj.put("job", "Lead");
 		
-		System.out.println(jsonObj.toString());
+		
+		System.out.println("<============> \n" +jsonObj.toString() + "\n <============> \n");
 
 		RestAssured.baseURI = "https://reqres.in";
 
