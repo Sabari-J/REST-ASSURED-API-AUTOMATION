@@ -12,7 +12,8 @@ public class Test01_GET {
 	public static void test_01() {
 
 		Response resp = get("https://reqres.in/api/users?page=2");
-
+//The Response class would likely contain information about the response from the server, such as the status code, headers, and the response body.
+		
 		System.out.println("Status Code: " + resp.getStatusCode());
 		// System.out.println("Status Code: " + resp.getHeaders());
 		System.out.println("Time: " + resp.time());

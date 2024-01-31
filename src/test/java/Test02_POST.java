@@ -12,6 +12,7 @@ public class Test02_POST {
 	public static void postRequest() {
 
 		JSONObject jsonObj = new JSONObject();
+//		The JSONObject class is part of the JSON-java library, and it provides a way to represent and manipulate JSON objects in Java.
 
 		jsonObj.put("name", "Sabari");
 		jsonObj.put("job", "Lead");
