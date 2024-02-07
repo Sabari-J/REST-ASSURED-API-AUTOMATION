@@ -14,14 +14,14 @@ import static org.hamcrest.Matchers.*;
 
 public class DynamicTestData {
 	
-	@Test (dataProvider = "BookData")
+	@Test (dataProvider = "BookData") //Takes Testdata frm the method- 'testDataProvider()' (Tag-> "@DataProvider" denotes,It supplies testdata) 
 	public static void parameterizingTestData(String isbn, String aisle) {
 
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 
-		String response = given().body(PayLoad.bookDetails(isbn, aisle))
+		String response = given().body(PayLoad.bookDetails(isbn, aisle)) // =>Body --Calling bookDetails method(has payload data) from Payload class
 				.when().post("/Library/Addbook.php")
-				.then().assertThat().statusCode(200).body("Msg", equalTo("successfully added")).extract().asString();
+				.then().assertThat().statusCode(200).body("Msg", equalTo("successfully added")).extract().asString(); //=> import 
 
 		JsonPath jsResponse = new JsonPath(response);
 		String id = jsResponse.get("ID");

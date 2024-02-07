@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cucmberOptions.Runner">
+      <class name="udemyPojo.KeepPracticing">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1"/>
-          <include name="tearDownClass"/>
+          <include name="postBookDetails" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- cucmberOptions.Runner -->
+      </class> <!-- udemyPojo.KeepPracticing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
