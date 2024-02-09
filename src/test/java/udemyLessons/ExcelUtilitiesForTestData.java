@@ -13,11 +13,12 @@ public class ExcelUtilitiesForTestData {
 
 		ExcelDataDriven data = new ExcelDataDriven();
 
-		List<String> testData = data.handlingExcelTestData("Sample", "Savings Account");
+		List<String> testData = data.handlingExcelTestData("Sample", "RestAssured");
 
 		System.out.println(testData.get(1));
 		System.out.println(testData.get(2));
 		System.out.println(testData.get(3));
+		System.out.println(testData.get(4));
 
 	}
 

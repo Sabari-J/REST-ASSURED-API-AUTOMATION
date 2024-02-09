@@ -1,61 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-07T13:35:20 IST" name="Default suite" finished-at="2024-02-07T13:35:23 IST" duration-ms="3449">
+  <suite started-at="2024-02-09T11:19:30 IST" name="Default suite" finished-at="2024-02-09T11:19:31 IST" duration-ms="798">
     <groups>
     </groups>
-    <test started-at="2024-02-07T13:35:20 IST" name="Default test" finished-at="2024-02-07T13:35:23 IST" duration-ms="3449">
-      <class name="udemyPojo.KeepPracticing">
-        <test-method signature="postBookDetails(java.lang.String,java.lang.String)[pri:0, instance:udemyPojo.KeepPracticing@d5b810e]" started-at="2024-02-07T13:35:20 IST" name="postBookDetails" data-provider="bookdata" finished-at="2024-02-07T13:35:23 IST" duration-ms="3066" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sabari-10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2024-02-09T11:19:30 IST" name="Default test" finished-at="2024-02-09T11:19:31 IST" duration-ms="798">
+      <class name="udemyLessons.ExcelUtilitiesForTestData">
+        <test-method signature="useDataFromExcel()[pri:0, instance:udemyLessons.ExcelUtilitiesForTestData@22ef9844]" started-at="2024-02-09T11:19:30 IST" name="useDataFromExcel" finished-at="2024-02-09T11:19:31 IST" duration-ms="761" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postBookDetails -->
-        <test-method signature="postBookDetails(java.lang.String,java.lang.String)[pri:0, instance:udemyPojo.KeepPracticing@d5b810e]" started-at="2024-02-07T13:35:23 IST" name="postBookDetails" data-provider="bookdata" finished-at="2024-02-07T13:35:23 IST" duration-ms="183" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sabari-11]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postBookDetails -->
-        <test-method signature="postBookDetails(java.lang.String,java.lang.String)[pri:0, instance:udemyPojo.KeepPracticing@d5b810e]" started-at="2024-02-07T13:35:23 IST" name="postBookDetails" data-provider="bookdata" finished-at="2024-02-07T13:35:23 IST" duration-ms="167" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sabari-12]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[789]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postBookDetails -->
-      </class> <!-- udemyPojo.KeepPracticing -->
+        </test-method> <!-- useDataFromExcel -->
+      </class> <!-- udemyLessons.ExcelUtilitiesForTestData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -16,13 +16,14 @@ import org.testng.annotations.Test;
 
 public class ExcelDataDriven {
 
+	public String excelPath = "C:\\Users\\sabareesan.j\\Desktop\\TestData - Sample.xlsx"; // This can be passed as a parameter for the below method
+
 	@Test
 	public List<String> handlingExcelTestData(String sheetName, String TestCaseName) throws Exception {
 
 		List<String> storeTestData = new ArrayList<String>();
 
-		String cellname = "Test Cases";
-		FileInputStream fis = new FileInputStream("C:\\Users\\sabareesan.j\\Desktop\\TestData - Sample.xlsx");
+		FileInputStream fis = new FileInputStream(excelPath);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		int sheetNos = workbook.getNumberOfSheets();
 
@@ -31,34 +32,33 @@ public class ExcelDataDriven {
 			String name = workbook.getSheetName(i);
 			if (name.equalsIgnoreCase(sheetName)) {
 
-				XSSFSheet sheet = workbook.getSheetAt(i);
+				XSSFSheet sheet = workbook.getSheetAt(i); // --> Expected Sheet reached
 
 				Iterator<Row> row = sheet.iterator();
-				Row firstrow = row.next();
+				Row firstrow = row.next(); // Iterating only the first(Header) row, not the others
 
-				Iterator<Cell> cell = firstrow.cellIterator();
+				Iterator<Cell> cell = firstrow.cellIterator(); // checking the next, next cells in first Row
 				int counter = 0;
 				int column = 0;
 				while (cell.hasNext()) {
 					Cell FirstCell = cell.next();
 
-					if (FirstCell.getStringCellValue().equalsIgnoreCase(cellname)) {
+					if (FirstCell.getStringCellValue().equalsIgnoreCase("Test Cases")) {
 						// System.out.println("Test Data");
 						column = counter;
 					}
-
 					counter++;
 				}
+				System.out.println("Column No: " + column); // --> Got the columnNo where the word "testcases" is
+															// available
 
-				System.out.println(column);
+				while (row.hasNext()) { // checking the row - 2
+					Row upcomingRow = row.next();
 
-				while (row.hasNext()) {
-					Row selectRow = row.next();
+					if (upcomingRow.getCell(column).getStringCellValue().equalsIgnoreCase(TestCaseName)) {
+						System.out.println("Reached the required TestCasename");
 
-					if (selectRow.getCell(column).getStringCellValue().equalsIgnoreCase(TestCaseName)) {
-						System.out.println("Reached the required Column");
-
-						Iterator<Cell> cellCheck = selectRow.cellIterator();
+						Iterator<Cell> cellCheck = upcomingRow.cellIterator();
 						while (cellCheck.hasNext()) {
 							Cell cellValues = cellCheck.next();
 							// String fetchValues = cellValues.getStringCellValue();
