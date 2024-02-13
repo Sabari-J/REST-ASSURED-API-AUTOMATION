@@ -45,7 +45,7 @@ public class ExcelDataDriven {
 
 					if (FirstCell.getStringCellValue().equalsIgnoreCase("Test Cases")) {
 						// System.out.println("Test Data");
-						column = counter;
+						column = counter; //==> Both column and counter are required here to find the column's no, Since we cannot directly get the content from 'upcomingRow'
 					}
 					counter++;
 				}
