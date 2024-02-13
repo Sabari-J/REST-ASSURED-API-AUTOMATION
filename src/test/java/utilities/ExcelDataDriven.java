@@ -85,6 +85,5 @@ public class ExcelDataDriven {
 	public void methodUsingExcelUtilities() throws Exception {
 
 		System.out.println(handlingExcelTestData("Sample", "Savings Account"));
-
 	}
 }
