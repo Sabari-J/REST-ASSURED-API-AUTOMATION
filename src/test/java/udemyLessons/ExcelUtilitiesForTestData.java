@@ -1,5 +1,6 @@
 package udemyLessons;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.annotations.Test;
@@ -13,7 +14,7 @@ public class ExcelUtilitiesForTestData {
 
 		ExcelDataDriven data = new ExcelDataDriven();
 
-		List<String> testData = data.handlingExcelTestData("Sample", "RestAssured");
+		ArrayList<String> testData = data.handlingExcelTestData("Sample", "RestAssured");
 
 		System.out.println(testData.get(1));
 		System.out.println(testData.get(2));

@@ -18,9 +18,9 @@ public class ExcelDataDriven {
 	public String excelPath = "C:\\Users\\sabareesan.j\\Desktop\\TestData - Sample.xlsx"; // This can be passed as a parameter for the below method
 
 	@Test
-	public List<String> handlingExcelTestData(String sheetName, String TestCaseName) throws Exception {
+	public ArrayList<String> handlingExcelTestData(String sheetName, String TestCaseName) throws Exception {
 
-		List<String> storeTestData = new ArrayList<String>();
+		ArrayList<String> storeTestData = new ArrayList<String>();
 
 		FileInputStream fis = new FileInputStream(excelPath);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -84,6 +84,6 @@ public class ExcelDataDriven {
 	@Test
 	public void methodUsingExcelUtilities() throws Exception {
 
-		System.out.println(handlingExcelTestData("Sample", "Savings Account"));
+		System.out.println(handlingExcelTestData("Sample", "RestAssured"));
 	}
 }

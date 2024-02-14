@@ -25,15 +25,16 @@ public class HashMapConvertedToJson {
 		HashMap<String, Object> map2 = new HashMap<String, Object>();
 		map2.put("lat", "-38.383494");
 		map2.put("lng", "33.427");
-		map2.put("location", map2); //
+		map.put("location", map2); //to deal Nested Array in Json, we can create like this
 
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 
 		given().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(PayLoad.bodyData())
+		//.body(map) --> Hashmap
 				.when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200)
 
 				// Validation of a particular value in Json response/Header
-				.body("scope", equalTo("APP")).header("server", "Apache/2.4.41 (Ubuntu)");
+				.body("scope", equalTo("APP")).header("server", "Apache/2.4.52 (Ubuntu)");
 
 	}
 
