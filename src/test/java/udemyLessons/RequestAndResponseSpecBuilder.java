@@ -17,10 +17,11 @@ public class RequestAndResponseSpecBuilder {
 	@Test
 	public static Response parseResponse() {
 
-		// RestAssured.baseURI = "https://rahulshettyacademy.com"; --> replaced by "RequestSpecBuilder"
-		// .log().all().assertThat().statusCode(200) --> replaced by - ResponseSpecification
+		/*** RestAssured.baseURI = "https://rahulshettyacademy.com"; --> replaced by "RequestSpecBuilder"
+							 &&&
+		 .log().all().assertThat().statusCode(200) --> replaced by - ResponseSpecification ***/
 		
-		/**RequestSpecBuilder && ResponseBuilder **/
+		/** RequestSpecBuilder && ResponseBuilder **/
 		RequestSpecification reqSpec = new RequestSpecBuilder()
 				.setBaseUri("https://rahulshettyacademy.com")
 				.addQueryParam("key", "qaclick123")

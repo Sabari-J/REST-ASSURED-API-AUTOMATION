@@ -9,12 +9,9 @@ import java.util.HashMap;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import udemyDataInputFiles.PayLoad;
 import utilities.ExcelDataDriven;
 
 public class ExcelUtilityFileIntegratedwithHashMap {
-
-	
 
 	@Test
 	public void testDatafromExcel() throws Exception {
@@ -38,11 +35,11 @@ public class ExcelUtilityFileIntegratedwithHashMap {
 
 		given().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(map)
 		//.body(PayLoad.bodyData())
-		//.body(map)
-				.when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200)
+		//System.out.println(map);
+		.when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200)
 
-				// Validation of a particular value in Json response/Header
-				.body("scope", equalTo("APP")).header("server", "Apache/2.4.52 (Ubuntu)");
+		// Validation of a particular value in Json response/Header
+		.body("scope", equalTo("APP")).header("server", "Apache/2.4.52 (Ubuntu)");
 	}
 
 }

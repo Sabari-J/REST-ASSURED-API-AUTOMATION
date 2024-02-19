@@ -23,13 +23,13 @@ public class JsonBodyResponseAssertions {
 		.assertThat()
 		.statusCode(200)
 				
-		//Validation of a particular value in Json response/Header
+		//Validation of a particular value in Json response/Header using Hamcrest
 		.body("scope", equalTo("APP"))
 		
-		//Validation of multiple values in Json response - Below mentioned "hasItems()" is just an example, not a part of this API
+		//Validation of multiple values in Json response using Hamcrest- Below mentioned "hasItems()" is just an example, not a part of this API
 		// .body("scope", hasItems("APP", "APP2", "APP3"));
 		
-		.header("server", "Apache/2.4.41 (Ubuntu)");
+		.header("server", "Apache/2.4.52 (Ubuntu)");
 		
 		
 		

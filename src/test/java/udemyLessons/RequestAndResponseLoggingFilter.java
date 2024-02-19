@@ -24,6 +24,7 @@ public class RequestAndResponseLoggingFilter {
 	public static void parseResponse() throws FileNotFoundException {
 
 		PrintStream reportLogFile = new PrintStream(new FileOutputStream("Output.txt"));
+		//PrintStream used for printing to the console or to write to files or other output streams.
 
 		RequestSpecification reqSpec = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
 				.addQueryParam("key", "qaclick123")
