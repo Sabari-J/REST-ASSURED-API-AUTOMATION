@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="udemyLessons.ExcelUtilityFileIntegratedwithHashMap">
+      <class name="udemyLessons.RequestAndResponseLoggingFilter">
         <methods>
-          <include name="testDatafromExcel"/>
+          <include name="parseResponse"/>
         </methods>
-      </class> <!-- udemyLessons.ExcelUtilityFileIntegratedwithHashMap -->
+      </class> <!-- udemyLessons.RequestAndResponseLoggingFilter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -30,10 +30,13 @@ public class RequestAndResponseLoggingFilter {
 				.addQueryParam("key", "qaclick123")
 
 				/**
-				 * RequestLoggingFilter - Will log the request, This filter will only log things
-				 * specified in the request specification
+				 * RequestLoggingFilter -  used to log incoming requests, This filter will only log things
+				 * specified in the request specification 
 				 * &&
-				 * ResponseLoggingFilter - A filter that'll print the response body
+				 * ResponseLoggingFilter - used to log outgoing responses
+				 * 
+				 * By adding these filters, we are ensuring that all incoming requests 
+				 * and outgoing responses are logged to the same file (reportLogFile in this case).
 				 **/
 
 				.addFilter(RequestLoggingFilter.logRequestTo(reportLogFile))
