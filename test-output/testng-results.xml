@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-19T11:58:04 IST" name="Default suite" finished-at="2024-02-19T11:58:05 IST" duration-ms="1162">
+  <suite started-at="2024-02-20T12:45:35 IST" name="Default suite" finished-at="2024-02-20T12:45:39 IST" duration-ms="3990">
     <groups>
     </groups>
-    <test started-at="2024-02-19T11:58:04 IST" name="Default test" finished-at="2024-02-19T11:58:05 IST" duration-ms="1162">
-      <class name="udemyLessons.MockingJsonResponse">
-        <test-method signature="getCourseDetails()[pri:0, instance:udemyLessons.MockingJsonResponse@22ef9844]" started-at="2024-02-19T11:58:04 IST" name="getCourseDetails" finished-at="2024-02-19T11:58:05 IST" duration-ms="1133" status="PASS">
+    <test started-at="2024-02-20T12:45:35 IST" name="Default test" finished-at="2024-02-20T12:45:39 IST" duration-ms="3990">
+      <class name="udemyLessons.RequestAndResponseSpecBuilder">
+        <test-method signature="parseResponse()[pri:0, instance:udemyLessons.RequestAndResponseSpecBuilder@22ef9844]" started-at="2024-02-20T12:45:35 IST" name="parseResponse" finished-at="2024-02-20T12:45:39 IST" duration-ms="3963" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getCourseDetails -->
-      </class> <!-- udemyLessons.MockingJsonResponse -->
+        </test-method> <!-- parseResponse -->
+      </class> <!-- udemyLessons.RequestAndResponseSpecBuilder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -9,6 +9,7 @@ import java.util.HashMap;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import udemyDataInputFiles.PayLoad;
 import utilities.ExcelDataDriven;
 
 public class ExcelUtilityFileIntegratedwithHashMap {
@@ -33,12 +34,13 @@ public class ExcelUtilityFileIntegratedwithHashMap {
 
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 
-		given().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(map)
-		//.body(PayLoad.bodyData())
+		given().queryParam("key", "qaclick123").header("Content-Type", "application/json")
+		//.body(map)
+		.body(PayLoad.bodyData())
 		//System.out.println(map);
 		.when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200)
 
-		// Validation of a particular value in Json response/Header
+		// Validation of a particular value in Json response/Header using Hamcrest
 		.body("scope", equalTo("APP")).header("server", "Apache/2.4.52 (Ubuntu)");
 	}
 

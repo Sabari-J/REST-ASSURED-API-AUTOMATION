@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -17,7 +18,7 @@ public class RequestAndResponseSpecBuilder {
 	@Test
 	public static Response parseResponse() {
 
-		/*** RestAssured.baseURI = "https://rahulshettyacademy.com"; --> replaced by "RequestSpecBuilder"
+		/*** RestAssured.baseURI = "https://rahulshettyacademy.com" & queryparam details; --> replaced by "RequestSpecBuilder"
 							 &&&
 		 .log().all().assertThat().statusCode(200) --> replaced by - ResponseSpecification ***/
 		
@@ -43,8 +44,13 @@ public class RequestAndResponseSpecBuilder {
 				.then().spec(responseSpec).extract().response();	
 
 		String comparingValues = validateResponse.asString();
-		System.out.println(comparingValues);
-		
+		//System.out.println(comparingValues);
+
+		/***	This segment will run only when this method has no return statment and return type	
+		JsonPath jsn = new JsonPath(comparingValues);
+		 String id1 = jsn.get("scope");
+		 System.out.println(id1);
+		**/
 		return validateResponse;
 		
 	}

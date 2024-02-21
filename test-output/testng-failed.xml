@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="udemyLessons.JsonBodyResponseAssertions">
+      <class name="udemyLessons.ExcelUtilityFileIntegratedwithHashMap">
         <methods>
-          <include name="parseResponse"/>
+          <include name="testDatafromExcel"/>
         </methods>
-      </class> <!-- udemyLessons.JsonBodyResponseAssertions -->
+      </class> <!-- udemyLessons.ExcelUtilityFileIntegratedwithHashMap -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -32,9 +32,7 @@ public class RequestAndResponseLoggingFilter {
 				/**
 				 * RequestLoggingFilter - Will log the request, This filter will only log things
 				 * specified in the request specification
-				 * 
 				 * &&
-				 * 
 				 * ResponseLoggingFilter - A filter that'll print the response body
 				 **/
 
