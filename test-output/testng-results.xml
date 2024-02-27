@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T12:53:16 IST" name="Default suite" finished-at="2024-02-21T12:53:17 IST" duration-ms="987">
+  <suite started-at="2024-02-26T10:33:46 IST" name="Default suite" finished-at="2024-02-26T10:33:46 IST" duration-ms="595">
     <groups>
     </groups>
-    <test started-at="2024-02-21T12:53:16 IST" name="Default test" finished-at="2024-02-21T12:53:17 IST" duration-ms="987">
+    <test started-at="2024-02-26T10:33:46 IST" name="Default test" finished-at="2024-02-26T10:33:46 IST" duration-ms="595">
       <class name="udemyLessons.RequestAndResponseLoggingFilter">
-        <test-method signature="parseResponse()[pri:0, instance:udemyLessons.RequestAndResponseLoggingFilter@1da2cb77]" started-at="2024-02-21T12:53:17 IST" name="parseResponse" finished-at="2024-02-21T12:53:17 IST" duration-ms="939" status="FAIL">
+        <test-method signature="parseResponse()[pri:0, instance:udemyLessons.RequestAndResponseLoggingFilter@1da2cb77]" started-at="2024-02-26T10:33:46 IST" name="parseResponse" finished-at="2024-02-26T10:33:46 IST" duration-ms="563" status="FAIL">
           <exception class="java.lang.NoSuchMethodError">
             <message>
               <![CDATA['org.hamcrest.Matcher org.hamcrest.core.IsInstanceOf.any(java.lang.Class)']]>
@@ -17,7 +17,7 @@
 at org.hamcrest.Matchers.any(Matchers.java:349)
 at io.restassured.filter.log.ResponseLoggingFilter.<init>(ResponseLoggingFilter.java:73)
 at io.restassured.filter.log.ResponseLoggingFilter.logResponseTo(ResponseLoggingFilter.java:182)
-at udemyLessons.RequestAndResponseLoggingFilter.parseResponse(RequestAndResponseLoggingFilter.java:40)
+at udemyLessons.RequestAndResponseLoggingFilter.parseResponse(RequestAndResponseLoggingFilter.java:43)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
