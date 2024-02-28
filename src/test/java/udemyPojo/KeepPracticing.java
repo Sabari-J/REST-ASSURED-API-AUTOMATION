@@ -11,6 +11,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -21,22 +22,24 @@ public class KeepPracticing {
 	@Test
 	public void reqSpec() throws FileNotFoundException {
 
-		PrintStream LogFile = new PrintStream(new FileOutputStream("LogFile.txt"));
+			PrintStream logfile= new PrintStream (new FileOutputStream("logfile.txt"));
+			
+			RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
+			.addFilter(RequestLoggingFilter.logRequestTo(logfile))
+			.addFilter(ResponseLoggingFilter.logResponseTo(logfile))
+			.setContentType(ContentType.JSON).build();
+			
+			ResponseSpecification res = new ResponseSpecBuilder().expectStatusCode(200).expectStatusLine("")
+			.expectContentType(ContentType.JSON).build();
+			
+		RequestSpecification requestData = given().spec(req).body(PayLoad.courseDetails());
 		
-		 RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123").setContentType(ContentType.JSON)
-		.addFilter(RequestLoggingFilter.logRequestTo(LogFile))
-		.addFilter(ResponseLoggingFilter.logResponseTo(LogFile))
-		.build();
-		 
-		 
-		 ResponseSpecification res = new ResponseSpecBuilder().expectStatusCode(200).expectStatusLine("HTTP/1.1 200 OK")
-				 .expectContentType(ContentType.JSON).build();
-		 
-		 
-		  RequestSpecification request = given().spec(req).body(PayLoad.courseDetails());
-		  
-		  Response response = request.when().post("").then().spec(res).extract().response();
-		 
+		Response responseData = requestData.when().post("").then().spec(res).extract().response();
+		
+		
+		JsonPath jsp = new JsonPath(responseData.asString());
+		
+		
 		
 	}
 }

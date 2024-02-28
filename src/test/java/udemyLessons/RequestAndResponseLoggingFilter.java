@@ -7,6 +7,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -56,8 +57,9 @@ public class RequestAndResponseLoggingFilter {
 				// then - validation/assertion for the request
 				.then().spec(responseSpec).extract().response();
 
-		String comparingValues = validateResponse.asString();
-		System.out.println(comparingValues);
+		//String comparingValues = validateResponse.asString();
+		JsonPath jsp = new JsonPath(validateResponse.asString());
+		System.out.println(jsp.get("id"));
 
 	}
 
