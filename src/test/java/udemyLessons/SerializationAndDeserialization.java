@@ -14,8 +14,9 @@ class Test implements Serializable {
 }
 
 public class SerializationAndDeserialization {
-
-	// Serialization -> converting an object to a file/network supported form
+	
+	/*** => Serialization and Deserialization both helps to parse and extract the responses (Json/XML)
+	  => Serialization -> converting an object to a file/network supported form (Payload)***/
 
 	public static void serializeMethod() throws Exception {
 

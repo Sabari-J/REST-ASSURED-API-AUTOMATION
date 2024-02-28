@@ -39,6 +39,7 @@ public class Serialization {
 		locationDetails.setlongitude(-45.23464235);		
 		location.setLocation(locationDetails);
 		
+		// In body we have passed the object(Pojo Class) as a payload
 		Response resp = given().log().all().queryParam("key", "qaclick123").body(location)
 				.when().post("/maps/api/place/add/json")
 				.then().assertThat().statusCode(200).extract().response();
