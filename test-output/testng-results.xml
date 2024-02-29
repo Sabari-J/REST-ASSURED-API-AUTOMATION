@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-28T10:33:38 IST" name="Default suite" finished-at="2024-02-28T10:33:43 IST" duration-ms="5026">
+  <suite started-at="2024-02-29T10:26:02 IST" name="Default suite" finished-at="2024-02-29T10:26:02 IST" duration-ms="61">
     <groups>
     </groups>
-    <test started-at="2024-02-28T10:33:38 IST" name="Default test" finished-at="2024-02-28T10:33:43 IST" duration-ms="5026">
-      <class name="udemyLessons.IntegratingMultipleAPIsAndOperations">
-        <test-method signature="parseResponse()[pri:0, instance:udemyLessons.IntegratingMultipleAPIsAndOperations@22ef9844]" started-at="2024-02-28T10:33:38 IST" name="parseResponse" finished-at="2024-02-28T10:33:43 IST" duration-ms="4999" status="PASS">
+    <test started-at="2024-02-29T10:26:02 IST" name="Default test" finished-at="2024-02-29T10:26:02 IST" duration-ms="61">
+      <class name="udemyPojo.KeepPracticing">
+        <test-method signature="reqSpec()[pri:0, instance:udemyPojo.KeepPracticing@22ef9844]" started-at="2024-02-29T10:26:02 IST" name="reqSpec" finished-at="2024-02-29T10:26:02 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- parseResponse -->
-      </class> <!-- udemyLessons.IntegratingMultipleAPIsAndOperations -->
+        </test-method> <!-- reqSpec -->
+      </class> <!-- udemyPojo.KeepPracticing -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

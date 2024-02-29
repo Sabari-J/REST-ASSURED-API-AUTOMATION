@@ -22,7 +22,7 @@ public class SerializationAndDeserialization {
 
 		Test t1 = new Test();
  
-		// fetch the information from the class(Object) and update it in the file
+		// fetch the information from the class(Object) and create/update it in the file(Json) ==>setter methods helps here...
 
 		FileOutputStream fos = new FileOutputStream("Textsample.txt");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -32,7 +32,7 @@ public class SerializationAndDeserialization {
 	}
 
 	public static void deserializeMethod() throws Exception {
-		// DeSerialization -> converting back a file/network supported form to an object
+		// DeSerialization -> converting back a file(Json)/network supported form to a class(object) ==>getter methods helps here...
 
 		FileInputStream fis = new FileInputStream("Textsample.txt");
 		ObjectInputStream ois = new ObjectInputStream(fis);

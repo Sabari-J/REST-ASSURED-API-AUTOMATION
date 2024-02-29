@@ -48,8 +48,10 @@ public class OAuthAndDeSerialization {
 		JsonPath jsonResp = new JsonPath(data);
 		String accessToken = jsonResp.getString("access_token");
 
+		// return type is GetDetails, since the json response will be stored as java object (using GetDetails Class_POJO), instead of string/response
 		GetDetails resp = given().queryParam("access_token", accessToken).expect().defaultParser(Parser.JSON)
 				.when().get("https://rahulshettyacademy.com/getCourse.php").as(GetDetails.class);
+		
 
 		System.out.println(resp.getLinkedIn());
 		System.out.println(resp.getInstructor());
@@ -57,7 +59,8 @@ public class OAuthAndDeSerialization {
 		System.out.println(resp.getInstructor());
 
 		ArrayList<String> expectedCourses = new ArrayList<String>();
-		List<WebAutomation> courseNames = resp.getCourses().getWebAutomation();
+		List<WebAutomation> courseNames = resp.getCourses().getWebAutomation(); // Fetching course details for the courses under WebAutomation(List)
+		// OR --->resp.getCourses().getWebAutomation().get(1).getCourseTitle();
 		for (WebAutomation name : courseNames) {
 			expectedCourses.add(name.getCourseTitle());
 
@@ -70,7 +73,7 @@ public class OAuthAndDeSerialization {
 
 		System.out.println("Course Name: " + expectedCourses);
 
-		List<String> actual = Arrays.asList(actualCourses);
+		List<String> actual = Arrays.asList(actualCourses);//converts arrays to arraylist, so that we can compare both the arraylists
 
 		Assert.assertTrue(actual.equals(expectedCourses));
 	}
