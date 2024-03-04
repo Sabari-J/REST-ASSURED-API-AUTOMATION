@@ -8,6 +8,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 class Test implements Serializable {
+	/* By implementing Serializable, you're indicating that instances of your Test class can be written
+	to an ObjectOutputStream and read from an ObjectInputStream */
 
 	int i = 0;
 	int j = 1;
