@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="udemyLessons.RequestAndResponseLoggingFilter">
+      <class name="udemyLessons.BodyInputFromExternalFile">
         <methods>
-          <include name="parseResponse"/>
+          <include name="invokingExternalJson"/>
         </methods>
-      </class> <!-- udemyLessons.RequestAndResponseLoggingFilter -->
+      </class> <!-- udemyLessons.BodyInputFromExternalFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

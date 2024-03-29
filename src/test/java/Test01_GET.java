@@ -28,11 +28,13 @@ public class Test01_GET {
 
 	@Test
 	public static void test_02() {
-		given().get("https://reqres.in/api/users?page=2").then()
+		Response res = given().get("https://reqres.in/api/users?page=2").then()
 		.body("data.id[0]", equalTo(7))
 //		.body("data.first_name", hasItem("Lindsay")) --> 'hasItem' matcher is typically used for checking if 'a collection' contains a specific item.
 		.body("data.first_name", hasItems("Michael", "Lindsay"))
-		.statusCode(200);
+		.statusCode(200).extract().response();
+		
+		int statusCode = res.getStatusCode();
 
 	}
 

@@ -25,7 +25,9 @@ public class BodyInputFromExternalFile extends JsonDataDriven {
 				//new String(): This creates a new String object from the byte array read from the file. (content of the file is encoded as text)
 				.body(new String(Files.readAllBytes(Paths.get("C:\\Users\\sabareesan.j\\Downloads\\UDEMY- APIs Automation\\addPlace.json"))))
 				.when().post("/maps/api/place/add/json")
-				.then().assertThat().statusCode(200).extract().asString();
+				.jsonPath().get("id");
+			// or
+			// .then().assertThat().statusCode(200).extract().asString();
 		System.out.println(resp);
 
 		JsonPath jsrep = new JsonPath(resp);
