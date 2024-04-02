@@ -32,11 +32,13 @@ public class Serialization {
 		List <String> types = new ArrayList<String>();
 		types.add("Shoe Park");
 		types.add("Park Town");
+		
 		location.setTypes(types);
 		
 		Location locationDetails = new Location();
 		locationDetails.setlatitide(-38.34523222);
-		locationDetails.setlongitude(-45.23464235);		
+		locationDetails.setlongitude(-45.23464235);	
+		
 		location.setLocation(locationDetails);
 		
 		// In body we have passed the object(Pojo Class) as a payload

@@ -30,6 +30,12 @@ public class Test02_POST {
 		.then()
 		.statusCode(201)
 		.log().all();
+		//.log().body();
+		//.log().cookies();
+		//.log().headers();
+		
+		
+		
 
 	}
 	
