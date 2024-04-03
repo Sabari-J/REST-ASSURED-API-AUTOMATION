@@ -29,7 +29,7 @@ public class HashMapConvertedToJson {
 
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 
-		given().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(PayLoad.bodyData())
+		given().queryParam("key", "qaclick123").header("Content-Type", "application/json").body(PayLoad.locationJsonData())
 		//.body(map) --> Hashmap
 				.when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200)
 

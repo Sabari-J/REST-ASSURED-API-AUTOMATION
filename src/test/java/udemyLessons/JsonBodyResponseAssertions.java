@@ -16,7 +16,7 @@ public class JsonBodyResponseAssertions {
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		
 		given().queryParam("key", "qaclick123").header("Content-Type", "application/json")
-		.body(PayLoad.bodyData())
+		.body(PayLoad.locationJsonData())
 		.when().post("/maps/api/place/add/json")
 		.then()
 		.log().all()

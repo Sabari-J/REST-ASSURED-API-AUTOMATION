@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="udemyLessons.BodyInputFromExternalFile">
+      <class name="udemyLessons.SerializationAndDeserializationByPavan">
         <methods>
-          <include name="invokingExternalJson"/>
+          <include name="deserializeMethod"/>
         </methods>
-      </class> <!-- udemyLessons.BodyInputFromExternalFile -->
+      </class> <!-- udemyLessons.SerializationAndDeserializationByPavan -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

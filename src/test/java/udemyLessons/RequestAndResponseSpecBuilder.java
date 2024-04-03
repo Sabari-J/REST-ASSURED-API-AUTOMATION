@@ -35,7 +35,7 @@ public class RequestAndResponseSpecBuilder {
 		
 		
 		// given - Inputs for the request
-		RequestSpecification res = given().spec(reqSpec).body(PayLoad.bodyData());
+		RequestSpecification res = given().spec(reqSpec).body(PayLoad.locationJsonData());
 		
 		// when - action of the request
 		Response validateResponse = res.when().post("/maps/api/place/add/json")

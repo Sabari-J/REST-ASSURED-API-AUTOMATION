@@ -20,7 +20,7 @@ public class IntegratingMultipleAPIsAndOperations {
 			
 			// POST --> Add Place API
 			String resp = given().queryParam("key", "qaclick123")
-			.body(PayLoad.bodyData())
+			.body(PayLoad.locationJsonData())
 			.when().post("/maps/api/place/add/json")
 			.then()
 			.assertThat().statusCode(200)

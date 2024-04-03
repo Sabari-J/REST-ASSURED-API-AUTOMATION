@@ -49,7 +49,7 @@ public class RequestAndResponseLoggingFilter {
 				.expectStatusLine("HTTP/1.1 200 OK").expectContentType(ContentType.JSON).build();
 
 		// given - Inputs for the request
-		RequestSpecification res = given().spec(reqSpec).body(PayLoad.bodyData());
+		RequestSpecification res = given().spec(reqSpec).body(PayLoad.locationJsonData());
 
 		// when - action of the request
 		Response validateResponse = res.when().post("/maps/api/place/add/json")

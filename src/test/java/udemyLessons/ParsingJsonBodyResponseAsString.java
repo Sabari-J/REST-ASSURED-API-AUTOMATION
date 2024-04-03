@@ -18,7 +18,7 @@ public class ParsingJsonBodyResponseAsString {
 
 		String response = given().queryParam("key", "qaclick123")
 				.header("Content-Type", "application/json")
-				.body(PayLoad.bodyData())
+				.body(PayLoad.locationJsonData())
 				.when().post("/maps/api/place/add/json")
 				.then().assertThat().statusCode(200)
 				// Validation of a particular value in Json response

@@ -15,7 +15,7 @@ import utilities.ExcelDataDriven;
 public class ExcelUtilityFileIntegratedwithHashMap {
 
 	@Test
-	public void testDatafromExcel() throws Exception {
+	public void locationJsonData() throws Exception {
 		
 		ExcelDataDriven testdata = new ExcelDataDriven();
 		ArrayList<String> data = testdata.handlingExcelTestData("Sample", "RestAssured");// ArrayList which has the value of the TestCase mentioned as "Parameter"
@@ -36,7 +36,7 @@ public class ExcelUtilityFileIntegratedwithHashMap {
 
 		given().queryParam("key", "qaclick123").header("Content-Type", "application/json")
 		//.body(map)
-		.body(PayLoad.bodyData())
+		.body(PayLoad.locationJsonData())
 		//System.out.println(map);
 		.when().post("/maps/api/place/add/json").then().log().all().assertThat().statusCode(200)
 
