@@ -43,7 +43,7 @@ public class Types_Authentication {
 	
 	@Test(priority = 3)
 	public void bearerToken() {
-		String bearerToken = "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"; // Generated from Github acc, but it will be different for each applications
+		String bearerToken = "(check the docs fetched from Udemy folder for the token)"; // Generated from Github acc, but it will be different for each applications
 		
 		given().headers("Authorization", "Bearer "+ bearerToken)
 		.when().get("https://api.github.com/user/repos")
