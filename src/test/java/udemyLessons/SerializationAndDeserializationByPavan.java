@@ -40,7 +40,7 @@ public class SerializationAndDeserializationByPavan {
 		location.setTypes(types);
 
 		Location locationDetails = new Location();
-		locationDetails.setlatitide(-38.34523222);
+		locationDetails.setlatitude(-38.34523222);
 		locationDetails.setlongitude(-45.234645);
 
 		location.setLocation(locationDetails);
@@ -81,7 +81,7 @@ public class SerializationAndDeserializationByPavan {
 			
 				System.out.println(locDetailPOJO.getName());
 				System.out.println(locDetailPOJO.getLanguage());
-				System.out.println(locDetailPOJO.getTypes());
+				System.out.println(locDetailPOJO.getTypes().get(1));
 				
 	}
 
