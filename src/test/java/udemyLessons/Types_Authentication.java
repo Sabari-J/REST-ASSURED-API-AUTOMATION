@@ -45,7 +45,8 @@ public class Types_Authentication {
 	public void bearerTokenAuthentication() {
 		
 		/** client(User_Web) first authenticates itself with the server using credentials like a username and password. 
-		Once authenticated, the server issues a bearer token to the client **/
+		Once authenticated, the server issues a bearer token to the client **/ 
+		// ==>Check the Screenshot
 		
 		String bearerToken = "(check the docs fetched from Udemy folder for the token)"; // Generated from Github acc, but it will be different for each applications
 		
@@ -81,7 +82,7 @@ public class Types_Authentication {
 	@Test(priority = 6)
 	public void apiKeyAuthentication() {
 		// To generate an API key, we need to login the api_url and we can generate it.
-		
+		// ==>Check the Screenshot
 		given().queryParam("appid", "fdasdge5hdrtw123414xsf")// app id is the API key
 				.given().get("URL")
 				.then().statusCode(200).log().all();
