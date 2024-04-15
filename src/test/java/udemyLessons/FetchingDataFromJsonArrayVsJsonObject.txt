@@ -1,5 +1,4 @@
- JSON response 
- =========================================================
+ ==================== JSON response=====================================
  {
   "location": {
     "lat": -38.383494,
@@ -29,7 +28,7 @@ examples:
 response.getJSONObject("books").getJSONArray("Cars").get(1);
 response.getJSONArray("book").getJSONObject(3).get("author");
 
-============================================================
+========================= JSON response===================================
  [
   {
   "id":1,
