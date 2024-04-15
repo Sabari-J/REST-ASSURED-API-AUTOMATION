@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="udemyLessons.SerializationAndDeserializationByPavan">
+      <class name="udemyLessons.DynamicTestData">
         <methods>
-          <include name="deserializeMethod"/>
+          <include name="parameterizingTestData" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- udemyLessons.SerializationAndDeserializationByPavan -->
+      </class> <!-- udemyLessons.DynamicTestData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

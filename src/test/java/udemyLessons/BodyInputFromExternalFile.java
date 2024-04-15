@@ -32,7 +32,7 @@ public class BodyInputFromExternalFile extends JsonDataDriven {
 
 		JsonPath jsrep = new JsonPath(resp);
 		String id = jsrep.get("id");
-		System.out.println("ID for this Request: " + id);
+		//System.out.println("ID for this Request: " + id);
 	}
 
 }

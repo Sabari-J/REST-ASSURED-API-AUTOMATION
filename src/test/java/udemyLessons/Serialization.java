@@ -49,7 +49,7 @@ public class Serialization {
 				.then().assertThat().statusCode(200).extract().response();
 		
 		String finalResponse = resp.asString();		
-		System.out.println("Success" + finalResponse);
+		System.out.println("Success" + resp);
 	}
 
 }

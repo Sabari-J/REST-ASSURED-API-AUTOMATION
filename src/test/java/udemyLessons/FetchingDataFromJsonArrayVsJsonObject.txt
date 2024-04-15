@@ -1,0 +1,83 @@
+ JSON response 
+ =========================================================
+ {
+  "location": {
+    "lat": -38.383494,
+    "lng": 33.427362
+  },
+  "accuracy": 50,
+  "name": "Frontline house",
+  "phone_number": "(+91) 983 893 3937",
+  "address": "29, side layout, cohen 09",
+  "types": [
+    "shoe park",
+    "shop"
+  ],
+  "website": "http://google.com",
+  "language": "French-IN"
+}
+
+-----------------------------------------------------------
+
+{ Data/response started and ended with } is JsonObject
+JsonObject response = new JsonObject(resp); 
+
+response.getJsonArray("types").get(1);
+response.getJSONObject("location").get("lat");
+
+examples:
+response.getJSONObject("books").getJSONArray("Cars").get(1);
+response.getJSONArray("book").getJSONObject(3).get("author");
+
+============================================================
+ [
+  {
+  "id":1,
+  "name": "Frontline house",
+  "phone_number": "(+91) 983 567 3937",
+  "address": "2, 2nd layout, cohen 09",
+  "types": [
+    "shoe park",
+    "Shoe shop"
+  ]
+  },
+  {
+  "id":2,
+  "name": "James house",
+  "phone_number": "(+91) 336 893 3937",
+  "address": "29, side layout, cohen 10",
+  "types": [
+    "kids park",
+    "Toy shop"
+  ]
+  },
+  {
+  "id":3,
+  "name": "Peter house",
+  "phone_number": "(+91) 122 893 7373",
+  "address": "33, middle layout, cohen 109",
+  "types": [
+    "Theme park",
+    "Ticket counter"
+  ]
+  },
+  {
+  "id":4,
+  "name": "Thomas house",
+  "phone_number": "(+91) 983 666 3937",
+  "address": "19, plain layout, cohen 33",
+  "types": [
+    "Tidel park",
+    "computer shop"
+  ]
+  }
+]
+------------------------------------------------------------
+[ Data/response started and ended with ] is JsonArray
+
+JsonArray response = new JsonArray(resp); 
+response.getJSONObject(2).get("name");
+response.getJSONObject(3).getJSONArray("types").get(0);
+
+
+
