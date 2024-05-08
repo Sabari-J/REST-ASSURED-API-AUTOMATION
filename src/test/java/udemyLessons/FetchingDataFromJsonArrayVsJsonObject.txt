@@ -72,6 +72,7 @@ response.getJSONArray("book").getJSONObject(3).get("author");
   ]
   }
 ]
+
 ------------------------------------------------------------
 [ Data/response started and ended with ] is JsonArray
 
