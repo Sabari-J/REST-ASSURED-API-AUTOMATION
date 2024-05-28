@@ -5,9 +5,9 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import resourcesForTesting.Utilities;
+import utilities.PropertiesUtilities;
 
-public class KeepPracticing extends Utilities{
+public class KeepPracticing extends PropertiesUtilities{
 
 	@Test
 	public void reqSpec() throws IOException {

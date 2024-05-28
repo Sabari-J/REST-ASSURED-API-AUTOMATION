@@ -1,13 +1,14 @@
-package resourcesForTesting;
+package utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class Utilities {
+public class PropertiesUtilities {
 
 	public static String getValuePropertyFile(String value) throws IOException {
 
@@ -18,6 +19,12 @@ public class Utilities {
 		//System.out.println(prop.get(value));
 		return (String) prop.get(value);
 
+	}
+	
+	//This method can be used as an alternative for the above method- to fetch a value from the properties file
+	public static ResourceBundle getPropertyData() {
+		ResourceBundle value = ResourceBundle.getBundle("routes"); //Load the respective properties file (e-x) 'routes' file here
+		return value;
 	}
 	
 	public static void main(String[] args) throws IOException {

@@ -13,13 +13,13 @@ import io.cucumber.java.en.When;
 
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import resourcesForTesting.Utilities;
 import udemyDataInputFiles.PayLoad;
 import udemyLessons.EnumClass;
 import udemyLessons.RequestAndResponseSpecBuilder;
 import utilities.JsonDataDriven;
+import utilities.PropertiesUtilities;
 
-public class Test_Stepdefinition extends Utilities {
+public class Test_Stepdefinition extends PropertiesUtilities {
 
 	RequestSpecification req, request;
 	ResponseSpecification res;

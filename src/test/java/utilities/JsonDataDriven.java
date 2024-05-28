@@ -4,9 +4,8 @@ import java.io.BufferedReader;
 
 import java.io.FileReader;
 import io.restassured.path.json.JsonPath;
-import resourcesForTesting.Utilities;
 
-public class JsonDataDriven extends Utilities {
+public class JsonDataDriven extends PropertiesUtilities {
 
 	// public String key = "testdata.compose.soundex[0].info.date_of_birth";
 
