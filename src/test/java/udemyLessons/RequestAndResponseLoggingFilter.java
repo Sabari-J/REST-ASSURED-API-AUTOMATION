@@ -59,7 +59,7 @@ public class RequestAndResponseLoggingFilter {
 
 		//String comparingValues = validateResponse.asString();
 		JsonPath jsp = new JsonPath(validateResponse.asString());
-		System.out.println(jsp.get("id"));
+		//System.out.print(jsp.get("id"));
 
 	}
 
